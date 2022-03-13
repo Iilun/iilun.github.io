@@ -171,7 +171,7 @@ $(window).on('load', function() {
 });
 
 $(document).on("click", "a", function(e){
-    e.preventDefault();
+    //e.preventDefault();
     imgOffset = imgOffset + 1
     displayPhoto(imgOffset)
 });

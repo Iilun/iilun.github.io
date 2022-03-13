@@ -152,7 +152,7 @@ function displayPhoto(imgOffset){
     var rand = sfc32(seed(), seed(), seed(), seed());
 
     //choix de l'image - modification de l'image
-    var nbImages = 41
+    var nbImages = 40
     var imageSelectionnee = Math.floor(rand() * (nbImages+1)) + 1;
 
     //choix de l'image

@@ -1,6 +1,5 @@
 #myBar {
   width: 10%;
-  height: 30px;
   background-color: #04AA6D;
   text-align: center; /* To center it horizontally (if you want) */
   line-height: 30px; /* To center it vertically */
@@ -9,9 +8,23 @@
 
 #myProgress{
   width: 100%;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  margin: auto;
 }
 
+.progress-container {
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+}
 
+.min50 {
+  min-height: 50px;
+  display: flex;
+}
 .u-section-1 .u-sheet-1 {
   min-height: 1015px;
 }
@@ -207,4 +220,6 @@
   .u-section-1 .u-text-1 {
     font-size: 2.0625rem;
   }
+
+  
 }

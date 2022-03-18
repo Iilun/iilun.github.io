@@ -96,7 +96,7 @@ function move(percentageValue) {
     i = 1;
     var elem = document.getElementById("myBar");
     var width = 0;
-    var id = setInterval(frame, 100);
+    var id = setInterval(frame, 70);
     function frame() {
       if (width >= Math.round(percentageValue*100)) {
         clearInterval(id);

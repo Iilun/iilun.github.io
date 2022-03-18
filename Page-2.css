@@ -24,6 +24,7 @@
 .min50 {
   min-height: 50px;
   display: flex;
+  margin-bottom: 20px;;
 }
 .u-section-1 .u-sheet-1 {
   min-height: 1015px;

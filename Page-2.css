@@ -1,3 +1,1027 @@
+.overlay {
+  position: absolute;
+  bottom: 0;  
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 6s ease;
+  z-index: 1000;
+}
+
+.container.FakeHover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.p2020 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2020.Animate {
+  top:20%;
+  left:20%;
+}
+.p2025 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2025.Animate {
+  top:20%;
+  left:25%;
+}
+.p2030 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2030.Animate {
+  top:20%;
+  left:30%;
+}
+.p2035 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2035.Animate {
+  top:20%;
+  left:35%;
+}
+.p2040 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2040.Animate {
+  top:20%;
+  left:40%;
+}
+.p2045 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2045.Animate {
+  top:20%;
+  left:45%;
+}
+.p2050 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2050.Animate {
+  top:20%;
+  left:50%;
+}
+.p2055 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2055.Animate {
+  top:20%;
+  left:55%;
+}
+.p2060 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2060.Animate {
+  top:20%;
+  left:60%;
+}
+.p2065 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2065.Animate {
+  top:20%;
+  left:65%;
+}
+.p2520 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2520.Animate {
+  top:25%;
+  left:20%;
+}
+.p2525 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2525.Animate {
+  top:25%;
+  left:25%;
+}
+.p2530 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2530.Animate {
+  top:25%;
+  left:30%;
+}
+.p2535 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2535.Animate {
+  top:25%;
+  left:35%;
+}
+.p2540 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2540.Animate {
+  top:25%;
+  left:40%;
+}
+.p2545 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2545.Animate {
+  top:25%;
+  left:45%;
+}
+.p2550 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2550.Animate {
+  top:25%;
+  left:50%;
+}
+.p2555 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2555.Animate {
+  top:25%;
+  left:55%;
+}
+.p2560 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2560.Animate {
+  top:25%;
+  left:60%;
+}
+.p2565 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p2565.Animate {
+  top:25%;
+  left:65%;
+}
+.p3020 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3020.Animate {
+  top:30%;
+  left:20%;
+}
+.p3025 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3025.Animate {
+  top:30%;
+  left:25%;
+}
+.p3030 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3030.Animate {
+  top:30%;
+  left:30%;
+}
+.p3035 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3035.Animate {
+  top:30%;
+  left:35%;
+}
+.p3040 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3040.Animate {
+  top:30%;
+  left:40%;
+}
+.p3045 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3045.Animate {
+  top:30%;
+  left:45%;
+}
+.p3050 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3050.Animate {
+  top:30%;
+  left:50%;
+}
+.p3055 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3055.Animate {
+  top:30%;
+  left:55%;
+}
+.p3060 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3060.Animate {
+  top:30%;
+  left:60%;
+}
+.p3065 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3065.Animate {
+  top:30%;
+  left:65%;
+}
+.p3520 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3520.Animate {
+  top:35%;
+  left:20%;
+}
+.p3525 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3525.Animate {
+  top:35%;
+  left:25%;
+}
+.p3530 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3530.Animate {
+  top:35%;
+  left:30%;
+}
+.p3535 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3535.Animate {
+  top:35%;
+  left:35%;
+}
+.p3540 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3540.Animate {
+  top:35%;
+  left:40%;
+}
+.p3545 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3545.Animate {
+  top:35%;
+  left:45%;
+}
+.p3550 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3550.Animate {
+  top:35%;
+  left:50%;
+}
+.p3555 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3555.Animate {
+  top:35%;
+  left:55%;
+}
+.p3560 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3560.Animate {
+  top:35%;
+  left:60%;
+}
+.p3565 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p3565.Animate {
+  top:35%;
+  left:65%;
+}
+.p4020 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4020.Animate {
+  top:40%;
+  left:20%;
+}
+.p4025 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4025.Animate {
+  top:40%;
+  left:25%;
+}
+.p4030 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4030.Animate {
+  top:40%;
+  left:30%;
+}
+.p4035 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4035.Animate {
+  top:40%;
+  left:35%;
+}
+.p4040 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4040.Animate {
+  top:40%;
+  left:40%;
+}
+.p4045 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4045.Animate {
+  top:40%;
+  left:45%;
+}
+.p4050 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4050.Animate {
+  top:40%;
+  left:50%;
+}
+.p4055 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4055.Animate {
+  top:40%;
+  left:55%;
+}
+.p4060 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4060.Animate {
+  top:40%;
+  left:60%;
+}
+.p4065 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4065.Animate {
+  top:40%;
+  left:65%;
+}
+.p4520 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4520.Animate {
+  top:45%;
+  left:20%;
+}
+.p4525 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4525.Animate {
+  top:45%;
+  left:25%;
+}
+.p4530 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4530.Animate {
+  top:45%;
+  left:30%;
+}
+.p4535 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4535.Animate {
+  top:45%;
+  left:35%;
+}
+.p4540 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4540.Animate {
+  top:45%;
+  left:40%;
+}
+.p4545 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4545.Animate {
+  top:45%;
+  left:45%;
+}
+.p4550 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4550.Animate {
+  top:45%;
+  left:50%;
+}
+.p4555 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4555.Animate {
+  top:45%;
+  left:55%;
+}
+.p4560 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4560.Animate {
+  top:45%;
+  left:60%;
+}
+.p4565 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p4565.Animate {
+  top:45%;
+  left:65%;
+}
+.p5020 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5020.Animate {
+  top:50%;
+  left:20%;
+}
+.p5025 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5025.Animate {
+  top:50%;
+  left:25%;
+}
+.p5030 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5030.Animate {
+  top:50%;
+  left:30%;
+}
+.p5035 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5035.Animate {
+  top:50%;
+  left:35%;
+}
+.p5040 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5040.Animate {
+  top:50%;
+  left:40%;
+}
+.p5045 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5045.Animate {
+  top:50%;
+  left:45%;
+}
+.p5050 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5050.Animate {
+  top:50%;
+  left:50%;
+}
+.p5055 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5055.Animate {
+  top:50%;
+  left:55%;
+}
+.p5060 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5060.Animate {
+  top:50%;
+  left:60%;
+}
+.p5065 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5065.Animate {
+  top:50%;
+  left:65%;
+}
+.p5520 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5520.Animate {
+  top:55%;
+  left:20%;
+}
+.p5525 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5525.Animate {
+  top:55%;
+  left:25%;
+}
+.p5530 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5530.Animate {
+  top:55%;
+  left:30%;
+}
+.p5535 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5535.Animate {
+  top:55%;
+  left:35%;
+}
+.p5540 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5540.Animate {
+  top:55%;
+  left:40%;
+}
+.p5545 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5545.Animate {
+  top:55%;
+  left:45%;
+}
+.p5550 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5550.Animate {
+  top:55%;
+  left:50%;
+}
+.p5555 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5555.Animate {
+  top:55%;
+  left:55%;
+}
+.p5560 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5560.Animate {
+  top:55%;
+  left:60%;
+}
+.p5565 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p5565.Animate {
+  top:55%;
+  left:65%;
+}
+.p6020 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6020.Animate {
+  top:60%;
+  left:20%;
+}
+.p6025 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6025.Animate {
+  top:60%;
+  left:25%;
+}
+.p6030 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6030.Animate {
+  top:60%;
+  left:30%;
+}
+.p6035 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6035.Animate {
+  top:60%;
+  left:35%;
+}
+.p6040 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6040.Animate {
+  top:60%;
+  left:40%;
+}
+.p6045 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6045.Animate {
+  top:60%;
+  left:45%;
+}
+.p6050 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6050.Animate {
+  top:60%;
+  left:50%;
+}
+.p6055 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6055.Animate {
+  top:60%;
+  left:55%;
+}
+.p6060 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6060.Animate {
+  top:60%;
+  left:60%;
+}
+.p6065 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6065.Animate {
+  top:60%;
+  left:65%;
+}
+.p6520 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6520.Animate {
+  top:65%;
+  left:20%;
+}
+.p6525 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6525.Animate {
+  top:65%;
+  left:25%;
+}
+.p6530 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6530.Animate {
+  top:65%;
+  left:30%;
+}
+.p6535 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6535.Animate {
+  top:65%;
+  left:35%;
+}
+.p6540 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6540.Animate {
+  top:65%;
+  left:40%;
+}
+.p6545 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6545.Animate {
+  top:65%;
+  left:45%;
+}
+.p6550 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6550.Animate {
+  top:65%;
+  left:50%;
+}
+.p6555 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6555.Animate {
+  top:65%;
+  left:55%;
+}
+.p6560 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6560.Animate {
+  top:65%;
+  left:60%;
+}
+.p6565 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p6565.Animate {
+  top:65%;
+  left:65%;
+}
+.p7020 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7020.Animate {
+  top:70%;
+  left:20%;
+}
+.p7025 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7025.Animate {
+  top:70%;
+  left:25%;
+}
+.p7030 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7030.Animate {
+  top:70%;
+  left:30%;
+}
+.p7035 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7035.Animate {
+  top:70%;
+  left:35%;
+}
+.p7040 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7040.Animate {
+  top:70%;
+  left:40%;
+}
+.p7045 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7045.Animate {
+  top:70%;
+  left:45%;
+}
+.p7050 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7050.Animate {
+  top:70%;
+  left:50%;
+}
+.p7055 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7055.Animate {
+  top:70%;
+  left:55%;
+}
+.p7060 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7060.Animate {
+  top:70%;
+  left:60%;
+}
+.p7065 {
+  top:50%;
+  left:50%;
+  transition: 6s ease;
+}
+.p7065.Animate {
+  top:70%;
+  left:65%;
+}
+
+
+
+
+
+
+
+
 #myBar {
   width: 10%;
   background-color: #04AA6D;

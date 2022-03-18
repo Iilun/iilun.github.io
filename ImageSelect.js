@@ -176,3 +176,59 @@ $(document).on("click", "a", function(e){
     displayPhoto(imgOffset)
 });
 
+function getRndInteger(min, max, mult) {
+  return Math.floor((Math.floor(Math.random() * (max - min) ) + min)/mult)*mult ;
+}
+
+$('#myHeart').hover(function(){
+  window.mytimeout = setTimeout(function() {
+    heartAnimation()
+  }, 700);
+}, function(){
+  clearTimeout(window.mytimeout);    
+});
+
+function generateChild(i){
+  heart = $("#myHeart")
+  basFontSize = Math.floor(parseFloat(heart.css("font-size")))
+  if (i != 0) {
+    fontSize = getRndInteger(10,basFontSize+10,1)
+  } else {
+    fontSize = basFontSize
+  }
+  
+  base ='<div class="text hearts '
+  position = "p" + getRndInteger(20,70,5) + getRndInteger(20,70,5)
+  
+  base += position + '" style="font-size:' + fontSize + "px" + '">🤍</div>'
+  return base
+}
+
+function heartAnimation() {
+  nbOfHearts = getRndInteger(5,15,1)
+  console.log(nbOfHearts)
+  for (i=0; i< nbOfHearts; i++){
+
+    childString = generateChild(i)
+    $(".overlay").append(childString)
+    console.log(childString)
+  }
+  
+  $(".container").addClass("FakeHover");
+  setTimeout(function() {
+    $(".hearts").addClass("Animate");
+    },500);
+  
+  
+  
+  
+  //reset
+  setTimeout(function() {
+    $(".overlay").css("transition","0s")
+    $(".container").removeClass("FakeHover");
+    $(".hearts").remove()
+    setTimeout(function() {
+      $(".overlay").css("transition","6s ease")
+    },500);
+  }, 6000);
+}

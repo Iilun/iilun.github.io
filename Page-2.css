@@ -14,6 +14,15 @@
   margin: auto;
 }
 
+.animated-font {
+  transition-property: font-size;
+  transition-duration: 2s;
+}
+
+.animated-font:hover {
+  font-size:400%;
+}
+
 .progress-container {
   width: 95%;
   height: 90%;

@@ -191,22 +191,38 @@ $('#myHeart').hover(function(){
 function generateChild(i){
   heart = $("#myHeart")
   basFontSize = Math.floor(parseFloat(heart.css("font-size")))
+
+  heartType = getRndInteger(0,4,1)
   if (i != 0) {
     fontSize = getRndInteger(10,basFontSize+10,1)
+    
   } else {
     fontSize = basFontSize
+    heartType = 0
   }
-  
+  switch(heartType) {
+    case 0 :
+      heartString = "🤍"
+      break;
+    case 1 :
+      heartString = "💛"
+      break;
+    case 2 :
+      heartString = "💚"
+      break;
+    case 3 :
+      heartString = "❤️"
+      break;
+  }
   base ='<div class="text hearts '
   position = "p" + getRndInteger(20,70,5) + getRndInteger(20,70,5)
   
-  base += position + '" style="font-size:' + fontSize + "px" + '">🤍</div>'
+  base += position + '" style="font-size:' + fontSize + "px" + '">' + heartString + '</div>'
   return base
 }
 
 function heartAnimation() {
   nbOfHearts = getRndInteger(5,15,1)
-  console.log(nbOfHearts)
   for (i=0; i< nbOfHearts; i++){
 
     childString = generateChild(i)

@@ -195,10 +195,11 @@ function generateChild(i){
   heartType = getRndInteger(0,4,1)
   if (i != 0) {
     fontSize = getRndInteger(10,basFontSize+10,1)
-    
+    zIndex = ""
   } else {
     fontSize = basFontSize
     heartType = 0
+    zIndex = "z-index:1500;"
   }
   switch(heartType) {
     case 0 :
@@ -217,7 +218,7 @@ function generateChild(i){
   base ='<div class="text hearts '
   position = "p" + getRndInteger(20,70,5) + getRndInteger(20,70,5)
   
-  base += position + '" style="font-size:' + fontSize + "px" + '">' + heartString + '</div>'
+  base += position + '" style="font-size:' + fontSize + "px;" + zIndex + '">' + heartString + '</div>'
   return base
 }
 

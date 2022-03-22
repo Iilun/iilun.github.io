@@ -41,8 +41,6 @@ function convertTZ(date, tzString) {
     return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
 }
 
-
-
 var offset = 0
 
 
@@ -71,24 +69,42 @@ var totalToDo = Math.trunc(totalToDoTime / (1000 * 3600 * 24)) - offset;
 var alreadyDonePercent = alreadyDone/totalToDo
 
 //creation du message
-var toDisplay =""
-
+var toDisplayFirst =""
 //debut du message
-toDisplay = toDisplay + "Plus que " + beforeTogether + " jours avant d'être ensemble. " 
+toDisplayFirst = toDisplayFirst + "Plus que " 
+toDisplaySecond = " jours avant d'être ensemble. " 
 
 //messages conditionnels
 if (alreadyDone >= beforeTogether) {
-    toDisplay = toDisplay + "On en a déja fait " + alreadyDone.days +". "
+  toDisplaySecond = toDisplaySecond + "On en a déja fait " + alreadyDone.days +". "
 }
-toDisplay = toDisplay + Math.fraction(alreadyDonePercent,10) + " a déjà été fait, ca passe vite en vrai"
+toDisplaySecond = toDisplaySecond + Math.fraction(alreadyDonePercent,10) + " a déjà été fait, ca passe vite en vrai"
 if (beforeTogether.days <= 10){
-    toDisplay = toDisplay + " AAAAAAAAAAAAH SI PROCHE\nClique ici : http://testanna.getenjoyment.net "
+  toDisplaySecond = toDisplaySecond + " AAAAAAAAAAAAH SI PROCHE\nClique ici : http://testanna.getenjoyment.net "
 }
 
+var j= 0;
+function display() {
+  if(j==0){
+    
 
-//affichage
-var text = document.getElementById("myText");
-text.innerHTML = toDisplay;
+    j = 1;
+    var elem2 = document.getElementById("myText");
+    var days = 142;
+    var id1 = setInterval(textIteration, 50);
+    function textIteration() {
+      if (days < beforeTogether ) {
+        clearInterval(id1);
+        j = 0;
+      } else {
+        elem2.innerHTML = toDisplayFirst + days + toDisplaySecond;
+        days--;
+      }
+    }
+  }
+}
+display()
+
 //barre de progression
 var i = 0;
 function move(percentageValue) {
@@ -109,7 +125,6 @@ function move(percentageValue) {
     }
   }
 }
-
 
 //Gestion du random : 
 

@@ -47,7 +47,7 @@ var offset = 0
 var togetherDate = new Date(Date.UTC(2022, 6, 7, 22, 0, 0));
 var todayDate = new Date()
 const todayDateAnna = convertTZ(todayDate, "Europe/Paris")
-var departureDate = new Date(Date.UTC(2022, 1, 14, 23, 0, 0));
+var departureDate = new Date(Date.UTC(2022, 1, 14, 22, 0, 0));
 
 
 // To calculate the time difference of two dates
@@ -63,7 +63,7 @@ var alreadyDone = Math.trunc(alreadyDoneTime / (1000 * 3600 * 24)) - offset;
 
 var totalToDoTime = - departureDate.getTime() + togetherDate.getTime();
 // To calculate the no. of days between two dates
-var totalToDo = Math.trunc(totalToDoTime / (1000 * 3600 * 24)) - offset;
+var totalToDo = 142 - offset;
 
 //calcul du pourcentage
 var alreadyDonePercent = alreadyDone/totalToDo

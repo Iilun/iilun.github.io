@@ -166,16 +166,22 @@ function displayPhoto(imgOffset){
 
     var rand = sfc32(seed(), seed(), seed(), seed());
 
-    //choix de l'image - modification de l'image
-    var nbImages = 39
-    var imageSelectionnee = Math.floor(rand() * (nbImages+1)) + 1;
+    var img = document.getElementById("myImg");
 
     //choix de l'image
-    var imgURL = "images/" + imageSelectionnee +".jpg"
-    console.log(imgURL)
-
-    var img = document.getElementById("myImg");
+    var imgURL = randImage(rand());
+    while (img.src.split('images/')[1] == imgURL) {
+      imgURL = randImage(rand())
+      console.log("redo")
+    }
+    imgURL = "images/" + imgURL 
     img.src = imgURL;
+    console.log(imgURL)
+}
+
+function randImage(value) {
+  var nbImages = 39
+  return  (Math.floor(value * (nbImages+1)) + 1) +".jpg"
 }
 
 var imgOffset =""

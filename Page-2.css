@@ -10,6 +10,20 @@
   z-index: 1000;
 }
 
+#myHeart {
+  z-index: 999;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+
 .container.FakeHover .overlay {
   height: 100%;
 }

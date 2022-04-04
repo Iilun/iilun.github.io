@@ -46,7 +46,7 @@ var offset = 0
 
 var togetherDate = new Date(Date.UTC(2022, 6, 7, 22, 0, 0));
 var todayDate = new Date()
-const todayDateAnna = convertTZ(todayDate, "Europe/Paris")
+const todayDateAnna =convertTZ(todayDate, "Europe/Paris")// new Date(Date.UTC(2022, 3, 6, 10, 0, 0));// 
 var departureDate = new Date(Date.UTC(2022, 1, 14, 22, 0, 0));
 
 
@@ -167,24 +167,24 @@ function displayPhoto(imgOffset){
     var rand = sfc32(seed(), seed(), seed(), seed());
 
     var img = document.getElementById("myImg");
-
+	var nbImages = 39
     //choix de l'image
-    var imgURL = randImage(rand());
+    var imgURL = randImage(rand(), nbImages);
     while (img.src.split('images/')[1] == imgURL) {
-      imgURL = randImage(rand())
+      imgURL = randImage(rand(), nbImages)
       console.log("redo")
     }
-    imgURL = "images/" + imgURL 
+    imgURL = "images/" + imgURL
     img.src = imgURL;
     console.log(imgURL)
 }
 
-function randImage(value) {
-  var nbImages = 39
+function randImage(value, nbImages) {
+  
   return  (Math.floor(value * (nbImages+1)) + 1) +".jpg"
 }
 
-var imgOffset =""
+var imgOffset = 0
 displayPhoto(imgOffset)
 
 $(window).on('load', function() {
@@ -194,7 +194,12 @@ $(window).on('load', function() {
 $(document).on("click", "a", function(e){
     //e.preventDefault();
     imgOffset = imgOffset + 1
-    displayPhoto(imgOffset)
+	if (todayDateAnna.getDate() == 6 && todayDateAnna.getMonth() == 3) {
+		displayPhoto604(imgOffset)
+	} else {
+		displayPhoto(imgOffset)
+	}
+    
 });
 
 function getRndInteger(min, max, mult) {
@@ -574,12 +579,24 @@ function year1Animation() {
 	year1Loop()
 }
 
+function displayPhoto604(imgOffset){
+   
+
+    var img = document.getElementById("myImg");
+    var imgURL = (imgOffset%5 +1) + ".jpg"
+    imgURL = "images604/" + imgURL 
+    img.src = imgURL;
+    console.log(imgURL)
+}
 
 
 
 if (todayDateAnna.getDate() == 6 && todayDateAnna.getMonth() == 5) {
 	//Faire l'image sticky
 	window.onload = year1Animation;
-} else if (todayDateAnna.getDate() == 6) {
+} else if (todayDateAnna.getDate() == 6 && todayDateAnna.getMonth() == 3) {
+	//Faire l'image sticky
+	window.onload = displayPhoto604(imgOffset);
+} if (todayDateAnna.getDate() == 6) {
 	window.onload = loop;
 }

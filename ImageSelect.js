@@ -583,4 +583,3 @@ if (todayDateAnna.getDate() == 6 && todayDateAnna.getMonth() == 5) {
 } else if (todayDateAnna.getDate() == 6) {
 	window.onload = loop;
 }
-window.onload = year1Animation;

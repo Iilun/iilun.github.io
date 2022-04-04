@@ -248,7 +248,7 @@ function heartAnimation() {
   for (i=0; i< nbOfHearts; i++){
 
     childString = generateChild(i)
-    $(".overlay").append(childString)
+    $("#overlayHearts").append(childString)
     console.log(childString)
   }
   
@@ -262,11 +262,11 @@ function heartAnimation() {
   
   //reset
   setTimeout(function() {
-    $(".overlay").css("transition","0s")
+    $("#overlayHearts").css("transition","0s")
     $(".container").removeClass("FakeHover");
     $(".hearts").remove()
     setTimeout(function() {
-      $(".overlay").css("transition","6s ease")
+      $("#overlayHearts").css("transition","6s ease")
     },500);
   }, 6000);
 }
@@ -310,7 +310,6 @@ var canvas = document.getElementById( 'myCanvas' ),
 // set canvas dimensions
 canvas.width = cw;
 canvas.height = ch;
-
 // now we are going to setup our function placeholders for the entire demo
 
 // get a random number within a range
@@ -468,8 +467,11 @@ function createParticles( x, y ) {
 
 // main demo loop
 function loop() {
+	ch = $(document).height()
+	canvas.height = ch
 	// this function will run endlessly with requestAnimationFrame
 	requestAnimFrame( loop );
+
 	
 	// increase the hue to get different colored fireworks over time
 	//hue += 0.5;
@@ -514,9 +516,71 @@ function loop() {
 	}
 }
 
-// once the window loads, we are ready for some fireworks!
-if (todayDateAnna.getDate() == 6) {
-  window.onload = loop;
+
+// main demo loop
+function year1Loop() {
+	timerTotal = 40
+	// this function will run endlessly with requestAnimationFrame
+	requestAnimFrame( year1Loop );
+	
+	// increase the hue to get different colored fireworks over time
+	//hue += 0.5;
+  
+  // create random color
+  hue= random(0, 360 );
+	
+	// normally, clearRect() would be used to clear the canvas
+	// we want to create a trailing effect though
+	// setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+	ctx.globalCompositeOperation = 'destination-out';
+	// decrease the alpha property to create more prominent trails
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+	ctx.fillRect( 0, 0, cw, ch );
+	// change the composite operation back to our main mode
+	// lighter creates bright highlight points as the fireworks and particles overlap each other
+	ctx.globalCompositeOperation = 'lighter';
+	
+	// loop over each firework, draw it, update it
+	var i = fireworks.length;
+	while( i-- ) {
+		fireworks[ i ].draw();
+		fireworks[ i ].update( i );
+	}
+	
+	// loop over each particle, draw it, update it
+	var i = particles.length;
+	while( i-- ) {
+		particles[ i ].draw();
+		particles[ i ].update( i );
+	}
+	
+	// launch fireworks automatically to random coordinates, when the mouse isn't down
+	if( timerTick >= timerTotal ) {
+		if( !mousedown ) {
+			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+			fireworks.push( new Firework( cw / 2, ch, random( cw/10, 9 * cw/10 ), random( ch/10, ch / 2 ) ) );
+			timerTick = 0;
+		}
+	} else {
+		timerTick++;
+	}
+}
+
+function year1Animation() {
+	img = $("#my1YearImg")
+	img.css("display","block")
+	$("#myCanvas").css("position", "sticky")
+	$(".container").addClass("FakeHover2");
+	year1Loop()
 }
 
 
+
+
+if (todayDateAnna.getDate() == 6 && todayDateAnna.getMonth() == 5) {
+	//Faire l'image sticky
+	window.onload = year1Animation;
+} else if (todayDateAnna.getDate() == 6) {
+	window.onload = loop;
+}
+window.onload = year1Animation;

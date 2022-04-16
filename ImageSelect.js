@@ -59,11 +59,11 @@ var beforeTogether = Math.trunc(beforeTogetherTime / (1000 * 3600 * 24)) - offse
 var alreadyDoneTime = - departureDate.getTime() + todayDate.getTime();
   
 // To calculate the no. of days between two dates
-var alreadyDone = Math.trunc(alreadyDoneTime / (1000 * 3600 * 24)) - offset;
+var alreadyDone = Math.trunc(alreadyDoneTime / (1000 * 3600 * 24)) + offset;
 
 var totalToDoTime = - departureDate.getTime() + togetherDate.getTime();
 // To calculate the no. of days between two dates
-var totalToDo = 142 - offset;
+var totalToDo = 142;
 
 //calcul du pourcentage
 var alreadyDonePercent = alreadyDone/totalToDo
@@ -76,7 +76,7 @@ toDisplaySecond = " jours avant d'être ensemble. "
 
 //messages conditionnels
 if (alreadyDone >= beforeTogether) {
-  toDisplaySecond = toDisplaySecond + "On en a déja fait " + alreadyDone.days +". "
+  toDisplaySecond = toDisplaySecond + "On en a déja fait " + alreadyDone +". "
 }
 toDisplaySecond = toDisplaySecond + Math.fraction(alreadyDonePercent,10) + " a déjà été fait, ca passe vite en vrai"
 if (beforeTogether.days <= 10){

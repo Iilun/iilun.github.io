@@ -44,7 +44,7 @@ function convertTZ(date, tzString) {
 var offset = 0
 
 
-var togetherDate = new Date(Date.UTC(2022, 6, 7, 22, 0, 0));
+var togetherDate = new Date(Date.UTC(2022, 6, 8, 22, 0, 0));
 var todayDate = new Date()
 const todayDateAnna =convertTZ(todayDate, "Europe/Paris")// new Date(Date.UTC(2022, 3, 6, 10, 0, 0));// 
 var departureDate = new Date(Date.UTC(2022, 1, 14, 22, 0, 0));

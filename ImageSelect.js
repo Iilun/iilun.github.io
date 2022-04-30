@@ -74,13 +74,18 @@ var toDisplayFirst =""
 toDisplayFirst = toDisplayFirst + "Plus que " 
 toDisplaySecond = " jours avant d'être ensemble. " 
 
+//suite du message
+toDisplayThird = ""
+toDisplayFourth =""
 //messages conditionnels
 if (alreadyDone >= beforeTogether) {
-  toDisplaySecond = toDisplaySecond + "On en a déja fait " + alreadyDone +". "
+	toDisplayThird = "On en a déja fait "
+	toDisplayFourth = ". "
 }
-toDisplaySecond = toDisplaySecond + Math.fraction(alreadyDonePercent,10) + " a déjà été fait, ca passe vite en vrai"
+
+endDisplay =  Math.fraction(alreadyDonePercent,10) + " a déjà été fait, ca passe vite en vrai"
 if (beforeTogether.days <= 10){
-  toDisplaySecond = toDisplaySecond + " AAAAAAAAAAAAH SI PROCHE\nClique ici : http://testanna.getenjoyment.net "
+	endDisplay = endDisplay + " AAAAAAAAAAAAH SI PROCHE\nClique ici : http://testanna.getenjoyment.net "
 }
 
 var j= 0;
@@ -91,14 +96,21 @@ function display() {
     j = 1;
     var elem2 = document.getElementById("myText");
     var days = 142;
+	var done = 0;
     var id1 = setInterval(textIteration, 50);
     function textIteration() {
       if (days < beforeTogether ) {
         clearInterval(id1);
         j = 0;
       } else {
-        elem2.innerHTML = toDisplayFirst + days + toDisplaySecond;
+		addedDisplay = ""
+		done ++;
+		if (toDisplayThird != "") {
+			addedDisplay = toDisplaySecond + toDisplayThird + done + toDisplayFourth
+		}
+        elem2.innerHTML = toDisplayFirst + days + toDisplaySecond + addedDisplay + endDisplay;
         days--;
+		
       }
     }
   }

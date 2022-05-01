@@ -106,7 +106,7 @@ function display() {
 		addedDisplay = ""
 		done ++;
 		if (toDisplayThird != "") {
-			addedDisplay = toDisplaySecond + toDisplayThird + done + toDisplayFourth
+			addedDisplay =  toDisplayThird + done + toDisplayFourth
 		}
         elem2.innerHTML = toDisplayFirst + days + toDisplaySecond + addedDisplay + endDisplay;
         days--;

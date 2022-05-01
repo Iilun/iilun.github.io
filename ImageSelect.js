@@ -95,7 +95,7 @@ function display() {
 
     j = 1;
     var elem2 = document.getElementById("myText");
-    var days = 142;
+    var days = 143;
 	var done = 0;
     var id1 = setInterval(textIteration, 50);
     function textIteration() {

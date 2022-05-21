@@ -179,7 +179,7 @@ function displayPhoto(imgOffset){
     var rand = sfc32(seed(), seed(), seed(), seed());
 
     var img = document.getElementById("myImg");
-	var nbImages = 39
+	var nbImages = 57
     //choix de l'image
     var imgURL = randImage(rand(), nbImages);
     while (img.src.split('images/')[1] == imgURL) {

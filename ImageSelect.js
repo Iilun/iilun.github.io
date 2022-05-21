@@ -193,7 +193,7 @@ function displayPhoto(imgOffset){
 
 function randImage(value, nbImages) {
   
-  return  (Math.floor(value * (nbImages+1)) + 1) +".jpg"
+  return  (Math.floor(value * (nbImages+1)) + 1) +".png"
 }
 
 var imgOffset = 0

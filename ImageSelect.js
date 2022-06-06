@@ -196,7 +196,7 @@ function randImage(value, nbImages) {
   return  (Math.floor(value * (nbImages+1)) + 1) +".png"
 }
 
-var imgOffset = 0
+var imgOffset = 3
 displayPhoto(imgOffset)
 
 $(window).on('load', function() {

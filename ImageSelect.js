@@ -609,6 +609,6 @@ if (todayDateAnna.getDate() == 6 && todayDateAnna.getMonth() == 5) {
 } else if (todayDateAnna.getDate() == 6 && todayDateAnna.getMonth() == 3) {
 	//Faire l'image sticky
 	window.onload = displayPhoto604(imgOffset);
-} if (todayDateAnna.getDate() == 6) {
+} else if (todayDateAnna.getDate() == 6) {
 	window.onload = loop;
 }
